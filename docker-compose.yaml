@@ -1,0 +1,13 @@
+version: "3"
+services: 
+  nexus:
+    image: sonatype/nexus3:3.17.0
+    ports: 
+    - "80:8081"
+    volumes: 
+    - "./nexus-data:/nexus-data"
+  athens:
+    image: gomods/athens:latest
+    ports: 
+    - "3000:3000"
+  
